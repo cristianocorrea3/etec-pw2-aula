@@ -10,6 +10,10 @@ app.use(express.json());
 /*HABILITA A APLICAÇÃO A MANIPULAR DADOS DE UM CORPO DE DADOS*/
 app.use(express.urlencoded({extended:true}));
 
+/*  CRIAÇÃO DAS ROTAS DE CATEGORIA */
+const categoriaController = require('./controller/categoriaController');
+app.use('/', categoriaController);
+
 /*
 TESTE DE ROTA HTTP GET
 2 PARAMETROS:
