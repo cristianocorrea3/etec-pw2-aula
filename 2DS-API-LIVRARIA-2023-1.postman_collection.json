@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "1b0fcdd1-c009-44ba-9e9b-7d4132bbe680",
+		"name": "2DS-API-LIVRARIA-2023-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9752073"
+	},
+	"item": [
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/categoria/selecionar",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"categoria",
+								"selecionar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/categoria/inserir",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"categoria",
+								"inserir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/categoria/alterar",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"categoria",
+								"alterar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}/categoria/excluir",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"categoria",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
