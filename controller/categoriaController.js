@@ -1,13 +1,24 @@
 const express = require('express');
 
+const categoriaModel = require('../model/categoriaModel');
+
 /* GERENCIADOR DE ROTAS*/
 const router = express.Router();
 
-
-
 /* ROTA DE INSERÇÃO DE AUTOR(POST)*/
 router.post('/categoria/inserir', (req,res)=>{
-    res.send('ROTA DE CATEGORIA DE INSERÇÃO!');
+
+    let nome_categoria = req.body.nome_categoria;
+    
+    categoriaModel.create(
+        {nome_categoria}
+    ).then(
+        ()=>{
+            res.send('CATEGORIA INSERIDA')
+        }   
+    )
+
+    //res.send('ROTA DE CATEGORIA DE INSERÇÃO!');
 
 })
 
