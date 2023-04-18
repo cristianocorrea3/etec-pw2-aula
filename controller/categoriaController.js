@@ -24,12 +24,33 @@ router.post('/categoria/inserir', (req,res)=>{
 
 /* ROTA DE SELEÇÃO DE AUTOR(GET)*/
 router.get('/categoria/selecionar', (req,res)=>{
-    res.send('ROTA DE CATEGORIA DE SELEÇÃO!');
+    
+    categoriaModel.findAll()
+    .then(
+        (categorias)=>{
+            //console.log(categorias);
+            res.json(categorias);
+        }
+    )
 
 })
 
 /* ROTA DE ALTERAÇÃO DE AUTOR(PUT)*/
 router.put('/categoria/alterar', (req,res)=>{
+
+    let id = req.body.id;
+    let nome_categoria = req.body.nome_categoria;
+
+    categoriaModel.update(
+        {nome_categoria},
+        {where:{id}}
+    ).then(
+        ()=>{
+            res.send("CATEGORIA ALTERADA")
+        }
+    )
+
+    //
     res.send('ROTA DE CATEGORIA DE ALTERAÇÃO!');
 
 })
