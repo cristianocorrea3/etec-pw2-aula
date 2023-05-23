@@ -14,10 +14,10 @@ router.post('/categoria/inserir', (req,res)=>{
         {nome_categoria}
     ).then(
         ()=>{
-           return res.status(201).json({
+            return res.status(201).json({
             errorStatus:false,
             mensageStatus:'CATEGORIA INSERIDA COM SUCESSO'
-           });
+            });
         }   
     ).catch(
         (error)=>{
@@ -89,7 +89,7 @@ router.delete('/categoria/excluir/:id', (req,res)=>{
             return res.status(200).json({
                 errorStatus:false,
                 mensageStatus:'CATEGORIA EXCLUIDA COM SUCESSO'
-               });
+            });
         }
     ).catch(
         (error)=>{

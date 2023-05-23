@@ -14,6 +14,10 @@ app.use(express.urlencoded({extended:true}));
 const categoriaController = require('./controller/categoriaController');
 app.use('/', categoriaController);
 
+/*  CRIAÇÃO DAS ROTAS DE LIVRO */
+const livroController = require('./controller/livroController');
+app.use('/', livroController);
+
 /*
 TESTE DE ROTA HTTP GET
 2 PARAMETROS:
