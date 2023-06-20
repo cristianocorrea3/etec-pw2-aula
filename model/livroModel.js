@@ -13,7 +13,6 @@ const livro = connection.define(
         titulo:{
             type: sequelize.STRING(500),
             allowNull:false
-
         },
         preco:{
             type: sequelize.STRING(500),
